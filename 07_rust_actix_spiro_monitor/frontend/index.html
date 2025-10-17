@@ -1,0 +1,1 @@
+<!doctype html><html><body><h3>Spirometry</h3><button id='b'>Measure</button><pre id='o'></pre><script> b.onclick=async()=>{const r=await fetch('http://127.0.0.1:8098/api/spiro'); const d=await r.json(); o.textContent=`FEV1=${d.fev1.toFixed(2)} FVC=${d.fvc.toFixed(2)} Ratio=${(100*d.ratio).toFixed(1)}%`; } </script></body></html>
